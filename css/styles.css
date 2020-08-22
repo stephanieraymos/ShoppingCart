@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
 * {
     box-sizing: border-box;
@@ -54,13 +55,13 @@ html, body {
     text-align: center;
     margin: 0;
     font-size: 4em;
-    font-family: "Metal Mania";
+    font-family: 'Monoton', cursive;
     font-weight: normal;
     color: white;
 }
 
 .band-name-large {
-    font-size: 8em;
+    font-size: 6em;
 }
 
 .content-section {
@@ -76,4 +77,31 @@ html, body {
 .section-header {
     font-family: "Metal Mania";
     font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-band-img {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background-color: #56ccf2;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
 }
