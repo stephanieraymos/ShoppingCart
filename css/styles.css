@@ -172,5 +172,30 @@ html, body {
 .tour-date {
     color: #555;
     font-weight: bold;
-    width: 11%;
+    min-width: 15%;
+    max-width: 17%;
+}
+
+.tour-city {
+    width: 23%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 16%;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #56ccf2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2d9cdb;
 }
