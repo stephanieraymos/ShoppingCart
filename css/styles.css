@@ -105,3 +105,12 @@ html, body {
     flex-grow: 1;
     text-align: end;
 }
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
