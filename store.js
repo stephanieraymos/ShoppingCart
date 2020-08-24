@@ -1,13 +1,19 @@
-const removeCartItemButtons = document.getElementsByClassName('btn-danger')
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
+}
 
-
-for (var i = 0; i < removeCartItemButtons.length; i++) {
-    var button = removeCartItemButtons[i]
-    button.addEventListener('click', function (event) {
-        var buttonClicked = event.target
-        buttonClicked.parentElement.parentElement.remove()
-        updateCartTotal()
-    })
+function ready() {
+    const removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click', function (event) {
+            var buttonClicked = event.target
+            buttonClicked.parentElement.parentElement.remove()
+            updateCartTotal()
+        })
+    }
 }
 
 function updateCartTotal() {
@@ -22,7 +28,6 @@ function updateCartTotal() {
         var price = parseFloat(priceElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
         total = total + (price * quantity)
-
     }
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
