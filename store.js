@@ -45,5 +45,6 @@ function updateCartTotal() {
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
+    total = Math.round(total * 100) / 100 //Rounding total to the nearest 2 decimal places
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
