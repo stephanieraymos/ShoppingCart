@@ -33,6 +33,7 @@ function purchaseClicked() {
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
+    updateCartTotal()
 }
 
 function removeCartItem(event) {
