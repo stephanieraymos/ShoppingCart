@@ -59,10 +59,10 @@ function addItemToCart(title, price, imageSrc) {
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added to your cart')
             return
-        } 
+        }
     }
 
-    cartRowContent = `
+    var cartRowContent = `
         <div class="cart-item cart-column">
             <img class="cart-item-img" src=${imageSrc} height="100">
             <span class="cart-item-title">${title}</span>
@@ -73,8 +73,9 @@ function addItemToCart(title, price, imageSrc) {
             <button class="btn btn-danger" role="button">Remove</button>
         </div>
     `
-        cartRow.innerHTML = cartRowContent
+    cartRow.innerHTML = cartRowContent
     cartItems.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
 }
 
 function updateCartTotal() {
